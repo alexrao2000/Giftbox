@@ -1,0 +1,44 @@
+{
+  "name": "giftbox",
+  "version": "1.0.0",
+  "description": "Private gift links for ticket delivery promises",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "check": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "owner-key": "tsx scripts/owner-key.ts",
+    "test:integration": "tsx scripts/integration.ts"
+  },
+  "keywords": [],
+  "type": "module",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0",
+    "@next/env": "^16.4.5",
+    "@vercel/blob": "^2.8.2",
+    "next": "^16.4.5",
+    "nodemailer": "^10.3.1",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/nodemailer": "^8.0.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=24"
+  },
+  "overrides": {
+    "@vercel/cli-config": {
+      "zod": "^4.6.7"
+    }
+  }
+}
